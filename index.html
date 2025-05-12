@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment — Webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: #171717;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            color: aliceblue;
+        }
+        .main-container {
+            background-color: #171717;
+            
+        }
+        .crs {
+            background-color: #171717;
+            padding: 10px;
+        }
+        .carousel {
+            background-color: #171717;
+            padding: 80px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: xx-large;
+    
+            font-weight: 600;
+            border: 1px solid #a8a8a8;
+            border-radius: 8px;
+        }
+        .cards {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 100px;
+            padding: 10px;
+        }
+        /* .card {
+            width: 220px;
+            background-color: #171717;
+            padding: 50px;
+            border: 1.5px solid #a8a8a8;
+            border-radius: 8px;
+            text-align: center;
+            font-size: larger;
+        } */
+         /* for thumbnail in the background */
+         .card {
+            width: 220px;
+            padding: 50px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: larger;
+            background-image: url(assets/thumbnail_1.png); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            color: white;
+            border: 1.5px solid #a8a8a8;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.4); /* dark overlay */
+            border-radius: 8px;
+            z-index: 0;
+        }
+        .card * {
+            position: relative;
+            z-index: 1;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+            background-color: rgb(170, 170, 170);
+            border-radius: 5px;
+            border: 1px solid white;
+            font-size: large;
+        }
+        a:hover {
+            background-color: rgb(248, 38, 38);
+            color: #a8a8a8;
+        }
+        .card p {
+            text-decoration: none;
+            font-size: larger;
+            font-style: bold;
+            font-weight: 600;
+        }
+        .card i {
+            margin: 5px;
+        }
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .right {
+            text-decoration: none;
+            background-color: lightblue;
+            color: #171717;
+            font-size: larger;
+            border: none;
+            border-radius: 5px;
+        }
+        .left {
+            text-decoration: none;
+            background-color: lightblue;
+            color: #171717;
+            font-size: larger;
+            border: none;
+            border-radius: 5px;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+        footer svg {
+            width: 14px;
+            height: 14px;
+            vertical-align: middle;
+            fill: #aaa;
+            margin-right: 5px;
+        }
+        .thumb {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        @media screen and (max-width: 768px) {
+        .cards {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .carousel {
+            padding: 40px 20px;
+            font-size: x-large;
+        }
+
+        .card {
+            width: 90%;
+            padding: 20px;
+        }
+
+        .button {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .left, .right {
+            width: 100px;
+            margin: 5px auto;
+        }
+
+        footer {
+            font-size: small;
+            padding: 10px;
+        }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main-container">
+        <div class="crs">
+            <div class="carousel">
+                Carousel
+                <span class="button">
+                    <button class="left" >&#8249;</button>
+                    <button class="right" >&#8250;</button>
+                </span>
+
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <p><i class="fa fa-youtube-play" style="font-size:30px;color:red"></i>YOUTUBE</p>
+                <p>card</p>
+                <a href="http://www.youtube.com/@thecowardlycode" target="_blank">watch now</a>
+            </div>
+            <div class="card">
+                <p><i class="fa fa-youtube-play" style="font-size:30px;color:red"></i>YOUTUBE</p>
+                <p>card</p>
+                <a href="http://www.youtube.com/@thecowardlycode" target="_blank">watch now</a>
+            </div>
+            <div class="card">
+                <p><i class="fa fa-youtube-play" style="font-size:30px;color:red"></i>YOUTUBE</p>
+                <p>card</p>
+                <a href="http://www.youtube.com/@thecowardlycode" target="_blank">watch now</a>
+            </div>
+        </div>
+
+        <footer>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.3 0-200-89.7-200-200S145.7 56 256 56s200 89.7 200 200-89.7 200-200 200zm0-336c-75.1 0-136 60.9-136 136s60.9 136 136 136 136-60.9 136-136S331.1 120 256 120z"/>
+            </svg>
+            copyright - numanfafoo@gmail.com
+          </footer>
+    
+    </div>
+</body>
+</html>
